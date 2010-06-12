@@ -1,0 +1,11 @@
+﻿#!/bin/bash
+cp ./SRC/main_proj.c main.c
+cp ./SRC/package.c pak.c
+iconv -f utf-8 -t cp1251 ./SRC/main_proj.c > main
+iconv -f utf-8 -t cp1251 ./SRC/package.c > pak
+mv pak ./SRC/package.c
+mv main ./SRC/main_proj.c
+make && make load
+make clean
+mv pak.c ./SRC/package.c
+mv main.c ./SRC/main_proj.c
