@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 cp ./SRC/main_proj.c main.c
 cp ./SRC/package.c pak.c
 iconv -f utf-8 -t cp1251 ./SRC/main_proj.c > main
